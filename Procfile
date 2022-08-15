@@ -1,1 +1,1 @@
-web gunicorn anim8-heroku.wsgi 
+web gunicorn django_project.wsgi 
