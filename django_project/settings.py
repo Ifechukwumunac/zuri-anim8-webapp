@@ -154,7 +154,7 @@ LOGOUT_REDIRECT_URL = "home"
 # you still have staticfiles dir for yours to work but then i suggest using my method its neater
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'css'),
+    os.path.join(BASE_DIR, 'static'),
 )
 # same reason statics are a lot more than css
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -184,8 +184,8 @@ if "CI" in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_USE_TLS = True  
-EMAIL_HOST = 'smtp.gmail.com'  
-EMAIL_HOST_USER = 'youremail@gmail.com'  
-EMAIL_HOST_PASSWORD = 'yourpassword'  
-EMAIL_PORT = 587 
+# EMAIL_USE_TLS = True  
+# EMAIL_HOST = 'smtp.gmail.com'  
+# EMAIL_HOST_USER = 'youremail@gmail.com'  
+# EMAIL_HOST_PASSWORD = 'yourpassword'  
+# EMAIL_PORT = 587 
