@@ -191,6 +191,10 @@
       letter-spacing: 0.001em;
       cursor: pointer;
     }
+    /* to remove django field error list sind=ce it spoils the positioning of the toggle icon */
+    .errorlist{
+      display: none;
+    }
   </style>
   <body>
     <main>
@@ -243,6 +247,12 @@
             {% endif %}
             {% endfor %}
             {{form.as_p }}
+            {% for field, error in form.errors.items %}
+        <div style="color: red;text-align:center;" role="alert">
+          <!-- strptags removes the . infront cos its being stripped from the li tag -->
+            {{ error|striptags }}
+        </div>
+        {% endfor %}
             <br />
             <input type="checkbox" name="terms" id="terms" required />I agree
             with Anim8's <a href="#">Terms</a>,
