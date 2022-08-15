@@ -9,7 +9,7 @@ from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
 
 def homepage(request):
-    return render(request, 'index.html')
+    return render(request, 'home.html')
 
 @login_required(login_url='login')
 def library(request):

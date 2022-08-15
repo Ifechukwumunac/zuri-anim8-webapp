@@ -73,7 +73,7 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,9 +153,9 @@ LOGOUT_REDIRECT_URL = "home"
 # it includes not just css but a lot other and again cause of my app
 # you still have staticfiles dir for yours to work but then i suggest using my method its neater
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 # same reason statics are a lot more than css
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
