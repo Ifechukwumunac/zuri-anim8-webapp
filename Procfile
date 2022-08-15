@@ -1,0 +1,1 @@
+web gunicorn anim8-heroku.wsgi 
