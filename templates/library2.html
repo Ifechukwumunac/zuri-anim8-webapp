@@ -55,7 +55,7 @@
     <main>
         <section id="features">
         <figure>
-            <img src="{% static 'slide-1.svg' %}" alt="FEATURES">
+            <img src="{% static 'accounts/slide-1.svg' %}" alt="FEATURES" >
             <img src="https://github.com/zuri-training/team-93_anime-lib/blob/main/Image/Slide2.gif?raw=true" alt="FEATURES">
             <img src="https://github.com/zuri-training/team-93_anime-lib/blob/main/Image/Slide%205.gif?raw=true" alt="FEATURES">
             <img src="https://github.com/zuri-training/team-93_anime-lib/blob/main/Image/slide%204.gif?raw=true" alt="FEATURES">
@@ -267,7 +267,7 @@
         }
 
         #features img {
-        background-image: url(../Image/Rectangle\ 80.svg);
+        background-image: url("{% static 'accounts/img-bg.svg' %}");
         background-size: cover;
         width: 20%;
         border-radius: 30px;

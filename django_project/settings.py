@@ -34,7 +34,7 @@ if not IS_HEROKU:
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8800']
 
 
 if 'SECRET_KEY' in os.environ:
