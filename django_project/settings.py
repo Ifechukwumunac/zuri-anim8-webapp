@@ -27,7 +27,7 @@ IS_HEROKU = "DYNO" in os.environ
 SECRET_KEY = 'django-insecure-1xlb)$r$a3+$0awvy9l*$#(k^)t3(x!pf030+3i!-3rn_kvq@m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# if not IS_HEROKU:
+if not IS_HEROKU:
 DEBUG = True
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
@@ -158,7 +158,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Enable WhiteNoise's GZip compression of static assets.
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Test Runner Config
 class HerokuDiscoverRunner(DiscoverRunner):
