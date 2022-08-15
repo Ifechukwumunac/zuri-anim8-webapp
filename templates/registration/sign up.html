@@ -248,7 +248,7 @@
             {% endfor %}
             {{form.as_p }}
             {% for field, error in form.errors.items %}
-        <div style="color: red;text-align:center;" role="alert">
+        <div style="color: red;text-align:right;margin-right: 37%;" role="alert">
           <!-- strptags removes the . infront cos its being stripped from the li tag -->
             {{ error|striptags }}
         </div>
